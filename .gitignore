@@ -1,0 +1,7 @@
+*.o
+*.d
+*.map
+*.elf
+*.cmd
+*.bat
+*.zip

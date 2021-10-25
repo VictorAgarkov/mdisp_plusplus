@@ -1,0 +1,422 @@
+# depslib dependency file v1.0
+1578740237 source:c:\users\vic\documents\work\arm\mdisp++\src\startup_stm32f10x_md.s
+
+1578740237 source:c:\users\vic\documents\work\arm\mdisp++\src\system_stm32f10x.c
+	"stm32f10x.h"
+
+1578740237 c:\users\vic\documents\work\arm\mdisp++\inc\stm32f10x.h
+	"core_cm3.h"
+	"system_stm32f10x.h"
+	<stdint.h>
+	"stm32f10x_conf.h"
+
+1578740238 c:\users\vic\documents\work\arm\mdisp++\cmsis\core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1578740238 c:\users\vic\documents\work\arm\mdisp++\cmsis\core_cminstr.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1578740238 c:\users\vic\documents\work\arm\mdisp++\cmsis\core_cmfunc.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1578740237 c:\users\vic\documents\work\arm\mdisp++\inc\system_stm32f10x.h
+
+1578740810 c:\users\vic\documents\work\arm\mdisp++\inc\stm32f10x_conf.h
+	"misc.h"
+
+1578740237 c:\users\vic\documents\work\arm\mdisp++\spl\inc\misc.h
+	"stm32f10x.h"
+
+1578740237 source:c:\users\vic\documents\work\arm\mdisp++\spl\src\misc.c
+	"misc.h"
+
+1579507464 source:c:\users\vic\documents\work\arm\mdisp++\src\main.cpp
+	"stm32f10x_conf.h"
+	"mdisp.h"
+	"polar2decart.h"
+	"get_wave.h"
+	"mover.h"
+	"bus_i2c_hard.h"
+	"bus_i2c_soft.h"
+	"bus_spi_soft.h"
+	"mdisp_device_i2c.h"
+	"mdisp_device_spi.h"
+	"bus_spi_hard_dma.h"
+
+1578746498 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_out_i2c.c
+	"config.h"
+	"gpio_F1xx.h"
+	<util/delay.h>
+	<avr/pgmspace.h>
+	<avr/io.h>
+	<stm32f10x.h>
+
+1579463121 c:\users\vic\documents\work\arm\mdisp++\src\config.h
+
+1578858026 c:\users\vic\documents\work\arm\mdisp++\src\gpio_f1xx.h
+	"stm32f10x_conf.h"
+
+1578774792 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp.hpp
+	<stdbool.h>
+	"point_types.h"
+	"config.h"
+	"init_seq.h"
+	"mdisp_out.hpp"
+
+1578907213 c:\users\vic\documents\work\arm\mdisp++\mdisp++\point_types.h
+	<stdint.h>
+
+1579521215 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp.cpp
+	"mdisp.h"
+	<stdlib.h>
+	<string.h>
+
+1578944725 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\fnt16x10.cpp
+	"mdisp.h"
+	<stdint.h>
+	<avr/pgmspace.h>
+
+1578775082 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\fnt_32x24.cpp
+	"mdisp.h"
+	<avr/pgmspace.h>
+
+1578775082 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\fnt_8x6.cpp
+	"mdisp.h"
+	<avr/pgmspace.h>
+
+1578747954 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\init_seq.c
+	"init_seq.h"
+
+1578747933 c:\users\vic\documents\work\arm\mdisp++\mdisp++\init_seq.h
+	<stdint.h>
+
+1578774823 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_out.hpp
+	<stdint.h>
+	"gpio_F1xx.h"
+
+1579272366 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_out.cpp
+	"mdisp_out.h"
+	"config.h"
+	<string.h>
+
+1578774823 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_out.hpp
+	<stdint.h>
+	"gpio_F1xx.h"
+
+1579252864 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_out.h
+	<stdint.h>
+	"gpio_F1xx.h"
+	"bus.h"
+
+1579521225 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp.h
+	<stdbool.h>
+	"point_types.h"
+	"config.h"
+	"init_seq.h"
+	"mdisp_device.h"
+
+1578908852 source:c:\users\vic\documents\work\arm\mdisp++\src\sine_fix256.c
+	"sine_fix256.h"
+
+1578908819 c:\users\vic\documents\work\arm\mdisp++\src\sine_fix256.h
+	<stdint.h>
+
+1578915175 source:c:\users\vic\documents\work\arm\mdisp++\src\r_triangle.cpp
+	"r_triangle.h"
+	<string.h>
+	"sine_fix256.h"
+
+1578908631 c:\users\vic\documents\work\arm\mdisp++\src\r_triangle.h
+	"point_types.h"
+
+1578927106 c:\users\vic\documents\work\arm\mdisp++\src\polar2decart.h
+	"point_types.h"
+
+1578935920 source:c:\users\vic\documents\work\arm\mdisp++\src\polar2decart.cpp
+	"polar2decart.h"
+	<string.h>
+	"get_wave.h"
+
+1578919647 source:c:\users\vic\documents\work\arm\mdisp++\src\get_wave.c
+	"get_wave.h"
+
+1578919349 c:\users\vic\documents\work\arm\mdisp++\src\get_wave.h
+	<stdint.h>
+
+1578918388 source:c:\users\vic\documents\work\arm\mdisp++\src\s100_m0_256.c
+	<stdint.h>
+
+1578934278 source:c:\users\vic\documents\work\arm\mdisp++\src\mover.cpp
+	"mover.h"
+	<string.h>
+
+1578933521 c:\users\vic\documents\work\arm\mdisp++\src\mover.h
+	"point_types.h"
+
+1578945090 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\fnt16x10.c
+	<stdint.h>
+	"config.h"
+	<avr/pgmspace.h>
+
+1578945098 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\fnt_32x24.c
+	"config.h"
+	<avr/pgmspace.h>
+
+1578993314 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\fnt_8x6.c
+	"config.h"
+	<avr/pgmspace.h>
+
+1579457988 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_i2c_hard.cpp
+	"bus_i2c_hard.h"
+
+1579457110 c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_i2c_hard.h
+	"bus.h"
+	"dma_isr.h"
+	"config.h"
+
+1579425934 c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus.h
+	"stm32f10x_conf.h"
+	"gpio_F1xx.h"
+
+1579259300 c:\users\vic\documents\work\arm\mdisp++\mdisp++\dma_isr.h
+	<stdint.h>
+
+1579274270 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\dma_isr.cpp
+	"dma_isr.h"
+	"stm32f10x_conf.h"
+
+1579464751 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_device.h
+	<stdint.h>
+
+1579368182 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_device_i2c.cpp
+	"mdisp_device_i2c.h"
+
+1579464882 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_device_i2c.h
+	"mdisp_device.h"
+	"bus.h"
+
+1579381565 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_i2c_soft.cpp
+	"bus_i2c_soft.h"
+	"config.h"
+	<string.h>
+
+1579381487 c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_i2c_soft.h
+	"bus.h"
+	"config.h"
+
+1579422592 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_spi_soft.cpp
+	"bus_spi_soft.h"
+	"config.h"
+	<string.h>
+
+1579384614 c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_spi_soft.h
+	"bus.h"
+	"config.h"
+
+1579518967 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_device_spi.cpp
+	"mdisp_device_spi.h"
+	<string.h>
+
+1579464914 c:\users\vic\documents\work\arm\mdisp++\mdisp++\mdisp_device_spi.h
+	"mdisp_device.h"
+	"bus.h"
+
+1579426869 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_spi_hard.cpp
+	"bus_spi_hard.h"
+	"config.h"
+	<string.h>
+
+1579426787 c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_spi_hard.h
+	"bus.h"
+	"config.h"
+
+1579509366 source:c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_spi_hard_dma.cpp
+	"bus_spi_hard_dma.h"
+	"config.h"
+	<string.h>
+
+1579443012 c:\users\vic\documents\work\arm\mdisp++\mdisp++\bus_spi_hard_dma.h
+	"bus.h"
+	"config.h"
+	"dma_isr.h"
+
+1593173976 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_i2c_hard.cpp
+	"bus_i2c_hard.h"
+
+1593173111 d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_i2c_hard.h
+	"bus.h"
+	"dma_isr.h"
+	"config.h"
+
+1579425936 d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus.h
+	"stm32f10x_conf.h"
+	"gpio_F1xx.h"
+
+1578740812 d:\vitek\work\arm\embitz\mdisp++\inc\stm32f10x_conf.h
+	"misc.h"
+
+1578740238 d:\vitek\work\arm\embitz\mdisp++\spl\inc\misc.h
+	"stm32f10x.h"
+
+1578740238 d:\vitek\work\arm\embitz\mdisp++\inc\stm32f10x.h
+	"core_cm3.h"
+	"system_stm32f10x.h"
+	<stdint.h>
+	"stm32f10x_conf.h"
+
+1578740240 d:\vitek\work\arm\embitz\mdisp++\cmsis\core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1578740240 d:\vitek\work\arm\embitz\mdisp++\cmsis\core_cminstr.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1578740240 d:\vitek\work\arm\embitz\mdisp++\cmsis\core_cmfunc.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1578740238 d:\vitek\work\arm\embitz\mdisp++\inc\system_stm32f10x.h
+
+1578858028 d:\vitek\work\arm\embitz\mdisp++\src\gpio_f1xx.h
+	"stm32f10x_conf.h"
+
+1579259302 d:\vitek\work\arm\embitz\mdisp++\mdisp++\dma_isr.h
+	<stdint.h>
+
+1579463122 d:\vitek\work\arm\embitz\mdisp++\src\config.h
+
+1579381566 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_i2c_soft.cpp
+	"bus_i2c_soft.h"
+	"config.h"
+	<string.h>
+
+1593173273 d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_i2c_soft.h
+	"bus.h"
+	"config.h"
+
+1579509368 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_spi_hard_dma.cpp
+	"bus_spi_hard_dma.h"
+	"config.h"
+	<string.h>
+
+1593173311 d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_spi_hard_dma.h
+	"bus.h"
+	"config.h"
+	"dma_isr.h"
+
+1579422594 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_spi_soft.cpp
+	"bus_spi_soft.h"
+	"config.h"
+	<string.h>
+
+1593173233 d:\vitek\work\arm\embitz\mdisp++\mdisp++\bus_spi_soft.h
+	"bus.h"
+	"config.h"
+
+1579274272 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\dma_isr.cpp
+	"dma_isr.h"
+	"stm32f10x_conf.h"
+
+1578945092 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\fnt16x10.c
+	<stdint.h>
+	"config.h"
+	<avr/pgmspace.h>
+
+1578945100 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\fnt_32x24.c
+	"config.h"
+	<avr/pgmspace.h>
+
+1578993316 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\fnt_8x6.c
+	"config.h"
+	<avr/pgmspace.h>
+
+1578747956 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\init_seq.c
+	"init_seq.h"
+
+1578747934 d:\vitek\work\arm\embitz\mdisp++\mdisp++\init_seq.h
+	<stdint.h>
+
+1579368184 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp_device_i2c.cpp
+	"mdisp_device_i2c.h"
+
+1593173355 d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp_device_i2c.h
+	"mdisp_device.h"
+	"bus.h"
+
+1579464752 d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp_device.h
+	<stdint.h>
+
+1578740238 source:d:\vitek\work\arm\embitz\mdisp++\spl\src\misc.c
+	"misc.h"
+
+1578919648 source:d:\vitek\work\arm\embitz\mdisp++\src\get_wave.c
+	"get_wave.h"
+
+1578919350 d:\vitek\work\arm\embitz\mdisp++\src\get_wave.h
+	<stdint.h>
+
+1579507466 source:d:\vitek\work\arm\embitz\mdisp++\src\main.cpp
+	"stm32f10x_conf.h"
+	"mdisp.h"
+	"polar2decart.h"
+	"get_wave.h"
+	"mover.h"
+	"bus_i2c_hard.h"
+	"bus_i2c_soft.h"
+	"bus_spi_soft.h"
+	"mdisp_device_i2c.h"
+	"mdisp_device_spi.h"
+	"bus_spi_hard_dma.h"
+
+1593174544 d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp.h
+	<stdbool.h>
+	"point_types.h"
+	"config.h"
+	"init_seq.h"
+	"mdisp_device.h"
+
+1578907214 d:\vitek\work\arm\embitz\mdisp++\mdisp++\point_types.h
+	<stdint.h>
+
+1578927108 d:\vitek\work\arm\embitz\mdisp++\src\polar2decart.h
+	"point_types.h"
+
+1578933522 d:\vitek\work\arm\embitz\mdisp++\src\mover.h
+	"point_types.h"
+
+1593174640 d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp_device_spi.h
+	"mdisp_device.h"
+	"bus.h"
+
+1578934280 source:d:\vitek\work\arm\embitz\mdisp++\src\mover.cpp
+	"mover.h"
+	<string.h>
+
+1578935922 source:d:\vitek\work\arm\embitz\mdisp++\src\polar2decart.cpp
+	"polar2decart.h"
+	<string.h>
+	"get_wave.h"
+
+1578918390 source:d:\vitek\work\arm\embitz\mdisp++\src\s100_m0_256.c
+	<stdint.h>
+
+1578740238 source:d:\vitek\work\arm\embitz\mdisp++\src\startup_stm32f10x_md.s
+
+1578740238 source:d:\vitek\work\arm\embitz\mdisp++\src\system_stm32f10x.c
+	"stm32f10x.h"
+
+1593174566 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp.cpp
+	"mdisp.h"
+	<stdlib.h>
+	<string.h>
+
+1593174671 source:d:\vitek\work\arm\embitz\mdisp++\mdisp++\mdisp_device_spi.cpp
+	"mdisp_device_spi.h"
+	<string.h>
+
