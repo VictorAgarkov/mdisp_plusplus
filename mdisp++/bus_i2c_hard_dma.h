@@ -44,7 +44,7 @@
 			void CheckNextBuff(void);
 
 			I2C_TypeDef *const m_i2c_base;
-			int dma_tx_ch, dma_rx_ch;        // номера каналов DMA, начинаются с 0 (не с 1, как в документации!)
+			int dma_tx_ch, dma_rx_ch;        // РЅРѕРјРµСЂР° РєР°РЅР°Р»РѕРІ DMA, РЅР°С‡РёРЅР°СЋС‚СЃСЏ СЃ 0 (РЅРµ СЃ 1, РєР°Рє РІ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё!)
 
 			// current transfer state
 			const struct data_buff *m_buffs;  // buffers set

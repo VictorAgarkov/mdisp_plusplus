@@ -36,7 +36,7 @@ BusSpiHardDma::BusSpiHardDma(SPI_TypeDef * const spi_base, int bit_rate)
 	}
 	else return;
 
-	// инициализируем первые 2 вывода (SCK, MOSI) на выход
+	// РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РїРµСЂРІС‹Рµ 2 РІС‹РІРѕРґР° (SCK, MOSI) РЅР° РІС‹С…РѕРґ
 	struct pin_def *pd = (struct pin_def *)pins;
 	for(unsigned int i = 0; i < 2 ; i++)
 	{
@@ -46,22 +46,22 @@ BusSpiHardDma::BusSpiHardDma(SPI_TypeDef * const spi_base, int bit_rate)
 			GPIO_SET_MODE(pd[i], GPIO_Mode_AF_PP | GPIO_Speed_10MHz);
 		}
 	}
-	// вычисляем базу регистров нужного канала DMA
+	// РІС‹С‡РёСЃР»СЏРµРј Р±Р°Р·Сѓ СЂРµРіРёСЃС‚СЂРѕРІ РЅСѓР¶РЅРѕРіРѕ РєР°РЅР°Р»Р° DMA
 	uint32_t addr = (uint32_t)DMA1_Channel1;
 	addr += m_dma_tx_channel * 20;
 	m_dma_tx_base = (DMA_Channel_TypeDef*)addr;
 
-	// регистрируемся как обработчик прерываний от DMA
+	// СЂРµРіРёСЃС‚СЂРёСЂСѓРµРјСЃСЏ РєР°Рє РѕР±СЂР°Р±РѕС‚С‡РёРє РїСЂРµСЂС‹РІР°РЅРёР№ РѕС‚ DMA
 	SetDmaIsrClent(1, m_dma_tx_channel + 1, this);
 }
 //-------------------------------------------------------------------------------------------------------------
 
 bool BusSpiHardDma::StartBuffers(const struct data_buff *buffs, int num)
 {
-	// стартуем вывод нескольких буферов
-	// возврат:
-	// false - передача не начата
-	// true  - передача начата, надо подождать
+	// СЃС‚Р°СЂС‚СѓРµРј РІС‹РІРѕРґ РЅРµСЃРєРѕР»СЊРєРёС… Р±СѓС„РµСЂРѕРІ
+	// РІРѕР·РІСЂР°С‚:
+	// false - РїРµСЂРµРґР°С‡Р° РЅРµ РЅР°С‡Р°С‚Р°
+	// true  - РїРµСЂРµРґР°С‡Р° РЅР°С‡Р°С‚Р°, РЅР°РґРѕ РїРѕРґРѕР¶РґР°С‚СЊ
 
 	if(m_dma_tx_channel < 0)     return false;
 	if(!num)                               return false;
@@ -91,7 +91,7 @@ void BusSpiHardDma::Break(void)
 //-------------------------------------------------------------------------------------------------------------
 void BusSpiHardDma::StartCurrentBuff(void)
 {
-	// начинаем передачу по DMA
+	// РЅР°С‡РёРЅР°РµРј РїРµСЂРµРґР°С‡Сѓ РїРѕ DMA
 	uint16_t len = m_buffs[m_curr_idx].len_flag;
 
 	// init DMA
@@ -110,17 +110,17 @@ void BusSpiHardDma::StartCurrentBuff(void)
 //-------------------------------------------------------------------------------------------------------------
 void BusSpiHardDma::CheckNextBuff(void)
 {
-	// сюда попадаем, когда выполнили всю работу с текущим буфером
+	// СЃСЋРґР° РїРѕРїР°РґР°РµРј, РєРѕРіРґР° РІС‹РїРѕР»РЅРёР»Рё РІСЃСЋ СЂР°Р±РѕС‚Сѓ СЃ С‚РµРєСѓС‰РёРј Р±СѓС„РµСЂРѕРј
 
 
 	if(++m_curr_idx < m_buffs_num)
 	{
-		// ещё есть буфер для передачи
+		// РµС‰С‘ РµСЃС‚СЊ Р±СѓС„РµСЂ РґР»СЏ РїРµСЂРµРґР°С‡Рё
 		StartCurrentBuff();
 	}
 	else
 	{
-		// всё передали
+		// РІСЃС‘ РїРµСЂРµРґР°Р»Рё
 		Break();
 	}
 }

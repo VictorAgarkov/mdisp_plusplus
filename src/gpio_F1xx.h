@@ -4,12 +4,12 @@
 
 	#include "stm32f10x_conf.h"
 
-	// структура - описатель вывода GPIO
+	// СЃС‚СЂСѓРєС‚СѓСЂР° - РѕРїРёСЃР°С‚РµР»СЊ РІС‹РІРѕРґР° GPIO
 	struct pin_def
 	{
 		GPIO_TypeDef *port;           // GPIO
 		int           pin;            // pin number
-		int           active_value;   // активное значение
+		int           active_value;   // Р°РєС‚РёРІРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	};
 
 
@@ -37,7 +37,7 @@
 	};
 
 
-	// макросы для работы с GPIO на STM32F1xx
+	// РјР°РєСЂРѕСЃС‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ GPIO РЅР° STM32F1xx
 	#define GPIO_RG2(reg, pin, val) reg = ((reg & ~((uint32_t)3  << ((pin) * 2))) | ((uint32_t)((val) & 3)  << ((pin) * 2)))
 	#define GPIO_RG4(reg, pin, val) reg = ((reg & ~((uint32_t)15 << ((pin) * 4))) | ((uint32_t)((val) & 15) << ((pin) * 4)))
 	#define REG_MASK_VAL(reg, mask, val) reg = (reg & ~(mask)) | (val)

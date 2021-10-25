@@ -85,10 +85,10 @@ void add_offset(point *dst, point *src, int point_num, int16_t xo, int16_t yo)
 //--------------------------------------------------------------------------------------------------
 void int2strdot(char *dst, int val, int num, int dot, char trailing_0)
 {
-	// преобразуем целое val в строку dst типа 1234.567
-	// num - кол-во символов
-	// dot - сколько разрядов после точки (-1, чтоб без точки)
-	// trailing_0 - какие символы вставлять вместо первых нулей
+	// РїСЂРµРѕР±СЂР°Р·СѓРµРј С†РµР»РѕРµ val РІ СЃС‚СЂРѕРєСѓ dst С‚РёРїР° 1234.567
+	// num - РєРѕР»-РІРѕ СЃРёРјРІРѕР»РѕРІ
+	// dot - СЃРєРѕР»СЊРєРѕ СЂР°Р·СЂСЏРґРѕРІ РїРѕСЃР»Рµ С‚РѕС‡РєРё (-1, С‡С‚РѕР± Р±РµР· С‚РѕС‡РєРё)
+	// trailing_0 - РєР°РєРёРµ СЃРёРјРІРѕР»С‹ РІСЃС‚Р°РІР»СЏС‚СЊ РІРјРµСЃС‚Рѕ РїРµСЂРІС‹С… РЅСѓР»РµР№
 
 	for(int pos = num - 1; pos >= 0; pos--)
 	{
@@ -105,7 +105,7 @@ void int2strdot(char *dst, int val, int num, int dot, char trailing_0)
 			}
 			else
 			{
-				// val == 0 - заполняем trailing_0
+				// val == 0 - Р·Р°РїРѕР»РЅСЏРµРј trailing_0
 				dst[pos] = trailing_0;
 			}
 		}
@@ -137,16 +137,16 @@ int main(void)
 
 	// ****  make displays  ****
 	MdispDeviceSpi disp_dev0(bus_spi1, spi1_CS_pin, spi1_DC_pin, spi1_RST_pin);
-	disp[0] = new Mdisp(DW, DH, disp_dev0, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // создаём объект-дисплей 0
+	disp[0] = new Mdisp(DW, DH, disp_dev0, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // СЃРѕР·РґР°С‘Рј РѕР±СЉРµРєС‚-РґРёСЃРїР»РµР№ 0
 
 	MdispDeviceI2c disp_dev1(bus_i2c2, 0x3c);
-	disp[1] = new Mdisp(DW, DH, disp_dev1, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // создаём объект-дисплей 1
+	disp[1] = new Mdisp(DW, DH, disp_dev1, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // СЃРѕР·РґР°С‘Рј РѕР±СЉРµРєС‚-РґРёСЃРїР»РµР№ 1
 
 	MdispDeviceI2c disp_dev2(bus_i2c1, 0x3c);
-	disp[2] = new Mdisp(DW, DH, disp_dev2, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // создаём объект-дисплей 2
+	disp[2] = new Mdisp(DW, DH, disp_dev2, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // СЃРѕР·РґР°С‘Рј РѕР±СЉРµРєС‚-РґРёСЃРїР»РµР№ 2
 
 	MdispDeviceI2c disp_dev3(bus_i2c1, 0x3d);
-	disp[3] = new Mdisp(DW, DH, disp_dev3, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // создаём объект-дисплей 3
+	disp[3] = new Mdisp(DW, DH, disp_dev3, SSD1306_init_sequence, sizeof(SSD1306_init_sequence)); // СЃРѕР·РґР°С‘Рј РѕР±СЉРµРєС‚-РґРёСЃРїР»РµР№ 3
 
 	for(unsigned int ii = 0; ii < NUMOFARRAY(disp); ii++)
 	{
@@ -204,10 +204,10 @@ int main(void)
 	int frame_cnt_tot = 0;
 	int seconds_cnt = 0;
 	int fps_min, fps_max;
-	char fps_str[4] = {0};   // строка с текущим FPS
-	char frm_str[10] = {0};   // строка со счётчиком фреймов
-	char afps_str[10] = {0};  // строка со спедним FPS
-	char fps_extr_str[16] = {"### < к/с < ###"};    // min/max FPS
+	char fps_str[4] = {0};   // СЃС‚СЂРѕРєР° СЃ С‚РµРєСѓС‰РёРј FPS
+	char frm_str[10] = {0};   // СЃС‚СЂРѕРєР° СЃРѕ СЃС‡С‘С‚С‡РёРєРѕРј С„СЂРµР№РјРѕРІ
+	char afps_str[10] = {0};  // СЃС‚СЂРѕРєР° СЃРѕ СЃРїРµРґРЅРёРј FPS
+	char fps_extr_str[16] = {"### < Рє/СЃ < ###"};    // min/max FPS
 
   while(1)
   {
@@ -234,10 +234,10 @@ int main(void)
 			pass_1sec = false;
 			seconds_cnt++;
 
-			// выводим текущий, min/max FPS
+			// РІС‹РІРѕРґРёРј С‚РµРєСѓС‰РёР№, min/max FPS
 			if(fps_str[0])
 			{
-				// гасим предыдущее значение, если есть
+				// РіР°СЃРёРј РїСЂРµРґС‹РґСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ, РµСЃР»Рё РµСЃС‚СЊ
 				disp[3]->set_x1y8(txt_x_fps, 0);
 				disp[3]->text_16x10_puts(fps_str);
 
@@ -264,18 +264,18 @@ int main(void)
 			disp[3]->text_8x6_puts(fps_extr_str);
 
 
-			// выводим средний FPS
+			// РІС‹РІРѕРґРёРј СЃСЂРµРґРЅРёР№ FPS
 			if(afps_str[0])
 			{
-				// уже выводили - стираем
+				// СѓР¶Рµ РІС‹РІРѕРґРёР»Рё - СЃС‚РёСЂР°РµРј
 				disp[3]->set_x1y8(txt_x_values, 1);
 				disp[3]->text_8x6_puts(afps_str);
 			}
 			else
 			{
-				// первый раз - выводим заголовок
+				// РїРµСЂРІС‹Р№ СЂР°Р· - РІС‹РІРѕРґРёРј Р·Р°РіРѕР»РѕРІРѕРє
 				disp[3]->set_x1y8(txt_x_label, 1);
-				disp[3]->text_8x6_puts((char*)"К/с :");
+				disp[3]->text_8x6_puts((char*)"Рљ/СЃ :");
 			}
 
 			int2strdot(afps_str, frame_cnt_tot * 1000 / seconds_cnt, 8, 3, 'o');
@@ -286,18 +286,18 @@ int main(void)
 		}
 
 
-		// выодим счётчик кадров
+		// РІС‹РѕРґРёРј СЃС‡С‘С‚С‡РёРє РєР°РґСЂРѕРІ
 		if(frm_str[0])
 		{
-			// уже выводили - стираем
+			// СѓР¶Рµ РІС‹РІРѕРґРёР»Рё - СЃС‚РёСЂР°РµРј
 			disp[3]->set_x1y8(txt_x_values, 0);
 			disp[3]->text_8x6_puts(frm_str);
 		}
 		else
 		{
-			// первый раз - выводим заголовок
+			// РїРµСЂРІС‹Р№ СЂР°Р· - РІС‹РІРѕРґРёРј Р·Р°РіРѕР»РѕРІРѕРє
 			disp[3]->set_x1y8(txt_x_label, 0);
-			disp[3]->text_8x6_puts((char*)"Кадр:");
+			disp[3]->text_8x6_puts((char*)"РљР°РґСЂ:");
 		}
 
 		int2strdot(frm_str, frame_cnt_tot, 8, -1, 'o');
@@ -305,7 +305,7 @@ int main(void)
 		disp[3]->text_8x6_puts(frm_str);
 
 
-		// мигаем квадратиком
+		// РјРёРіР°РµРј РєРІР°РґСЂР°С‚РёРєРѕРј
 		if(flash_en)
 		{
 			flash_en = false;
